@@ -9,8 +9,8 @@ const https = require('https');
 const http = require('http');
 
 // Configuration
-const BACKEND_URL = 'https://loyalty-backend-production-8e32.up.railway.app';
-const FRONTEND_URL = 'https://loyalty-frontend.netlify.app';
+const BACKEND_URL = 'https://loyalty-backend-production-f1d3.up.railway.app';
+const FRONTEND_URL = 'https://loyaltysite.netlify.app';
 
 async function testCORS() {
   console.log('🧪 Testing CORS Configuration...\n');

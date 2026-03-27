@@ -8,7 +8,7 @@
 const https = require('https');
 const http = require('http');
 
-const RAILWAY_URL = 'https://loyalty-backend-production-8e32.up.railway.app';
+const RAILWAY_URL = 'https://loyalty-backend-production-f1d3.up.railway.app';
 
 async function testRailwayHealth() {
   console.log('🚀 Testing Railway Deployment Health...\n');
@@ -29,7 +29,7 @@ async function testRailwayHealth() {
     // Test CORS endpoint
     console.log('\n2. Testing /api/cors-test endpoint...');
     const corsResponse = await makeRequest(`${RAILWAY_URL}/api/cors-test`, {
-      'Origin': 'https://loyalty-frontend.netlify.app'
+      'Origin': 'https://loyaltysite.netlify.app'
     });
     
     console.log('✅ CORS Response:');
