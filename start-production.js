@@ -65,9 +65,8 @@ const getCorsOrigins = () => {
   ];
 
   const productionOrigins = [
-    'https://loyalty-frontend.netlify.app',
-    'https://loyalty-admin.netlify.app',
-    'https://loyalty-backend-production-8e32.up.railway.app'
+    'https://loyaltysite.netlify.app',
+    'https://loyalty-backend-production-f1d3.up.railway.app'
   ];
 
   const envCorsOrigin = process.env.CORS_ORIGIN;

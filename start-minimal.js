@@ -29,9 +29,8 @@ const corsOptions = {
       'http://localhost:5173',
       'http://localhost:8080',
       'http://localhost:8081',
-      'https://loyalty-frontend.netlify.app',
-      'https://loyalty-admin.netlify.app',
-      'https://loyalty-backend-production-8e32.up.railway.app'
+      'https://loyaltysite.netlify.app',
+      'https://loyalty-backend-production-f1d3.up.railway.app'
     ];
 
     // Add environment-specific CORS origins if provided
