@@ -1,30 +1,28 @@
-# Use Node.js 20 Alpine image for compatibility with simple-xml-to-json
-FROM node:20-alpine
+# Use Node.js 20 slim (Debian-based) for prebuilt native module binaries
+FROM node:20-slim
 
 # Set working directory
 WORKDIR /app
 
 # Install system dependencies required for native modules (canvas, sharp, etc.)
-RUN apk add --no-cache \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     python3 \
     make \
     g++ \
-    cairo-dev \
-    jpeg-dev \
-    pango-dev \
-    musl-dev \
-    giflib-dev \
-    pixman-dev \
-    pangomm-dev \
-    libjpeg-turbo-dev \
-    freetype-dev \
+    libcairo2-dev \
+    libjpeg62-turbo-dev \
+    libpango1.0-dev \
+    libgif-dev \
+    libpixman-1-dev \
+    librsvg2-dev \
+    pkg-config \
     fontconfig \
-    ttf-dejavu \
-    ttf-liberation \
-    ttf-opensans \
-    font-noto \
-    font-noto-cjk \
-    font-noto-emoji
+    fonts-dejavu-core \
+    fonts-liberation \
+    fonts-noto \
+    fonts-noto-cjk \
+    fonts-noto-color-emoji \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copy package files
 COPY package*.json ./
